@@ -1,0 +1,23 @@
+Sub InsertPicture(PicturePath As String, DestinationCell As String, ImgWidth As Long, ImgHeight As Long)
+    Dim ws As Worksheet
+    Dim img As Shape
+
+    Set ws = ActiveSheet
+    
+    ' Inserta la imagen utilizando el método AddPicture
+    Set img = ws.Shapes.AddPicture(Filename:=PicturePath, _
+                                   LinkToFile:=msoFalse, _
+                                   SaveWithDocument:=msoTrue, _
+                                   Left:=ws.Range(DestinationCell).Left, _
+                                   Top:=ws.Range(DestinationCell).Top, _
+                                   Width:=-1, _
+                                   Height:=-1)
+    
+    ' Desbloquear la proporción de aspecto
+    img.LockAspectRatio = msoFalse
+    
+    ' Establecer el ancho y el alto específicos
+    img.Width = ImgWidth
+    img.Height = ImgHeight
+End Sub
+

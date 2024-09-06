@@ -1,0 +1,9 @@
+matplotlib
+seaborn
+windrose
+XlsxWriter
+playwright
+folium
+xlwings
+tk
+customtkinter

@@ -1,0 +1,10 @@
+venv/
+*.xlsx
+*.csv
+*.html
+__pycache__
+*.zip
+datos/*
+!datos/.gitkeep
+reportes/*
+!reportes/.gitkeep
